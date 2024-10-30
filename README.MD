@@ -16,7 +16,7 @@ cd laravel-app
 In your Laravel project root, create a Dockerfile:
 
 ```Dockerfile
-FROM php:8.3-fpm-alpine
+FROM php:8.3-fpm
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y libpng-dev libonig-dev libxml2-dev zip curl unzip git nginx && apt-get clean
