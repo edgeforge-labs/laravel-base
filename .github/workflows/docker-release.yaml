@@ -52,7 +52,7 @@ jobs:
           push: true
           tags: |
             edgeforge/website:${{ steps.gitversion.outputs.semVer }}
-            edgeforge/website:"${{ github.sha }}"
+            edgeforge/website:${{ github.sha }}
           # platforms: linux/amd64,linux/arm64  # Optional: for multi-architecture support
 
       - name: Log out from Docker Hub
