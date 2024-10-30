@@ -27,10 +27,14 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
+      - name: Print Working Dir
+        run : |
+          pwd
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: "$env:GITHUB_WORKSPACE/website/"
+          context: ./website
           push: true
           tags: |
             edgeforge/website:latest
