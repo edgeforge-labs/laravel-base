@@ -30,7 +30,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: $env:GITHUB_WORKSPACE\website
+          context: "$env:GITHUB_WORKSPACE/website/"
           push: true
           tags: |
             edgeforge/website:latest
