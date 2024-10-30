@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   laravel-app:
     image: edgeforge/website:latest
