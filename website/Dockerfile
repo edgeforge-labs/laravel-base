@@ -29,7 +29,7 @@ RUN chown -R www-data:www-data /var/www
 # update composer and install npm
 RUN composer update && npm install
 
-# Generate the Application Key
+# Generate the Application Key & Migrate DB
 RUN php artisan key:generate && php artisan migrate
 
 CMD ["/start.sh"]

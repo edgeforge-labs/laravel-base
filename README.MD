@@ -44,11 +44,13 @@ RUN chmod +x /start.sh
 # set permissions for project
 RUN chown -R www-data:www-data /var/www
 
+# update composer and install npm
 RUN composer update && npm install
 
+# Generate the Application Key & Migrate DB
+RUN php artisan key:generate && php artisan migrate
+
 CMD ["/start.sh"]
-
-
 ```
 
 In the above Dockerfile, you would also need an Nginx configuration (default.conf). Here's a basic example:
@@ -59,6 +61,7 @@ server {
 
     index index.php index.html;
     root /var/www/public;
+    error_log /var/log/nginx/error.log debug;
 
     location / {
         try_files $uri $uri/ /index.php?$query_string;
@@ -100,7 +103,7 @@ This will run php-fpm in the background, followed by nginx in the foreground whe
 
 ## Edit env file
 
-set this in env file, The hostname (DB_HOST) is the name of the MySQL service you'll create in Kubernetes.
+set this in env file, the env file will be ignored by gitignore file created by default, either manually inject or remove ignore. The hostname (DB_HOST) is the name of the MySQL service you'll create in Kubernetes or the name of the docker container in docker compose.
 
 ```env
 DB_CONNECTION=mysql
