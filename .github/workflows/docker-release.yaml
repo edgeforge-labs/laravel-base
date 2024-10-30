@@ -1,10 +1,16 @@
 # This action leverages Gitversion to release ( build, tag and publish ) a docker container
 name: Build and Publish Docker Image
 
+permissions:
+  id-token: write
+  contents: write
+
 on:
   push:
     branches:
       - main
+#    paths:
+#      - 'website/**'  # this only triggers pipeline when updates to path dir are made
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:

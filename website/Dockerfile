@@ -30,6 +30,6 @@ RUN chown -R www-data:www-data /var/www
 RUN composer update && npm install
 
 # Generate the Application Key & Migrate DB
-RUN php artisan key:generate && php artisan migrate
+RUN php artisan key:generate
 
 CMD ["/start.sh"]
