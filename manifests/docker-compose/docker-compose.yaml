@@ -4,20 +4,10 @@ services:
   laravel-app:
     image: edgeforge/website:latest
     container_name: website
-    build:
-      context: .
-      dockerfile: Dockerfile
     ports:
       - "8080:80"  # Maps port 8080 on host to port 80 in the container for nginx
     depends_on:
       - mysql
-    environment:
-      DB_CONNECTION: mysql
-      DB_HOST: mysql
-      DB_PORT: 3306
-      DB_DATABASE: laravel_db
-      DB_USERNAME: root
-      DB_PASSWORD: password
     volumes:
       - ./:/var/www  # Mounts the current directory to /var/www inside the container
     networks:
@@ -28,7 +18,7 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: laravel_db
+      MYSQL_DATABASE: website
     ports:
       - "3306:3306"  # Exposes MySQL on port 3306
     volumes:
