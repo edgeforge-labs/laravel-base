@@ -117,6 +117,8 @@ DB_PASSWORD=password
 
 ## build and push the image to container registry
 
+**This Part is automated by our [pipeline](./.github/workflows/docker-release.yaml)**
+
 ### build
 
 ```bash
