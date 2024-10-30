@@ -26,6 +26,10 @@ RUN chmod +x /start.sh
 # set permissions for project
 RUN chown -R www-data:www-data /var/www
 
+# update composer and install npm
 RUN composer update && npm install
+
+# Generate the Application Key
+RUN php artisan key:generate
 
 CMD ["/start.sh"]
