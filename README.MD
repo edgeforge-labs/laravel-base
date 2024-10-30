@@ -19,7 +19,10 @@ In your Laravel project root, create a Dockerfile:
 FROM php:8.3-fpm
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y libpng-dev libonig-dev libxml2-dev zip curl unzip git nginx && apt-get clean
+RUN apt update && apt install -y libpng-dev libonig-dev libxml2-dev zip curl unzip git nginx && apt clean
+
+# setup node
+RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh && chmod +x nodesource_setup.sh && bash nodesource_setup.sh && apt install -y nodejs && apt clean
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
@@ -41,7 +44,10 @@ RUN chmod +x /start.sh
 # set permissions for project
 RUN chown -R www-data:www-data /var/www
 
+RUN composer update && npm install
+
 CMD ["/start.sh"]
+
 
 ```
 
