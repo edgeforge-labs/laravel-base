@@ -26,6 +26,6 @@ RUN chmod +x /start.sh
 # set permissions for project
 RUN chown -R www-data:www-data /var/www
 
-RUN composer update
+RUN composer update && npm install
 
 CMD ["/start.sh"]
