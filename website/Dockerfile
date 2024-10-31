@@ -1,7 +1,7 @@
 FROM php:8.3-fpm
 
 # Install system dependencies
-RUN apt update && apt install -y libpng-dev libonig-dev libxml2-dev zip curl unzip git nginx net-tools && apt clean
+RUN apt update && apt install -y libpng-dev libonig-dev libxml2-dev zip curl unzip git nginx net-tools netcat && apt clean
 
 # setup node
 RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh && chmod +x nodesource_setup.sh && bash nodesource_setup.sh && apt install -y nodejs && apt clean
@@ -29,7 +29,7 @@ RUN chown -R www-data:www-data /var/www
 # update composer and install npm
 RUN composer update && npm install
 
-# Generate the Application Key & Migrate DB
-RUN php artisan key:generate
+# Generate the Application Key & Migrate DB => moved to start script
+# RUN php artisan key:generate
 
 CMD ["/start.sh"]
