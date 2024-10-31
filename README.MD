@@ -146,6 +146,10 @@ docker push edgeforge-labs/laravel-app:latest
 ````
 
 
+## run php aritsan migrate
+
+for this the db needs to be connected, run this in integration pipeline.
+
 ## Deploy created image via kubernetes
 
 under manifests/ there is a ful deploy.yml, this has all the manifests needed to make the app, PV still needs to be added but all the rest is there.
