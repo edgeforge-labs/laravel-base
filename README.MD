@@ -19,7 +19,7 @@ In your Laravel project root, create a Dockerfile:
 FROM php:8.3-fpm
 
 # Install system dependencies
-RUN apt update && apt install -y libpng-dev libonig-dev libxml2-dev zip curl unzip git nginx && apt clean
+RUN apt update && apt install -y libpng-dev libonig-dev libxml2-dev zip curl unzip git nginx net-tools netcat-traditional && apt clean
 
 # setup node
 RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh && chmod +x nodesource_setup.sh && bash nodesource_setup.sh && apt install -y nodejs && apt clean
@@ -45,10 +45,9 @@ RUN chmod +x /start.sh
 RUN chown -R www-data:www-data /var/www
 
 # update composer and install npm
-RUN composer update && npm install
+RUN composer update && npm install && npm run build
 
-# Generate the Application Key
-RUN php artisan key:generate
+
 CMD ["/start.sh"]
 ```
 
@@ -83,6 +82,22 @@ you will also need to add a script to start the php-fpm process, you can find it
 cat <<EOF | sudo tee start.sh
 #!/bin/sh
 
+export DB_HOST="mysql"
+
+# Wait for MySQL to be ready
+echo "Waiting for MySQL to be available..."
+
+until nc -z "$DB_HOST" 3306; do
+  echo "MySQL is unavailable - waiting..."
+  sleep 3
+done
+
+echo "MySQL is available - continuing with migrations..."
+
+# Run Laravel commands
+php artisan key:generate
+php artisan migrate --force  # Use --force in production to run migrations non-interactively
+
 # Start PHP-FPM in the background
 php-fpm -D
 
@@ -106,9 +121,9 @@ set this in env file, the env file will be ignored by gitignore file created by 
 
 ```env
 DB_CONNECTION=mysql
-DB_HOST=mysql-service
+DB_HOST=mysql   # Use DNS name or IP, name of container for compose, name of K8s Service in K8s
 DB_PORT=3306
-DB_DATABASE=laravel_db
+DB_DATABASE=website
 DB_USERNAME=root
 DB_PASSWORD=password
 ```
@@ -147,7 +162,11 @@ docker push edgeforge-labs/laravel-app:latest
 
 ## run php aritsan migrate
 
-for this the db needs to be connected, run this in integration pipeline.
+for this the db needs to be connected, we added a step for this in the start up script.
+
+## Deploy created image via docker compose
+
+Docker compose is the default way to use this container. The [compose file](./website/docker-compose.yaml) can be found in the [app root](./website). Just run it and verify functionality at ``http://localhost:8080``
 
 ## Deploy created image via kubernetes
 
