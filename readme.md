@@ -162,7 +162,7 @@ docker push edgeforge-labs/laravel-app:latest
 
 ## run php aritsan migrate
 
-for this the db needs to be connected, we added a step for this in the start up script.
+for this the db needs to be connected, we added a step for this in the startup script.
 
 ## Deploy created image via docker compose
 
