@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export DB_HOST="mysql"
+
 # Wait for MySQL to be ready
 echo "Waiting for MySQL to be available..."
 
