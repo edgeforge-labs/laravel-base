@@ -9,8 +9,8 @@ on:
   push:
     branches:
       - main
-#    paths:
-#      - 'website/**'  # this only triggers pipeline when updates to path dir are made
+    paths:
+      - 'website/**'  # this only triggers pipeline when updates to path dir are made
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
