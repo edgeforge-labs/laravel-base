@@ -121,9 +121,9 @@ set this in env file, the env file will be ignored by gitignore file created by 
 
 ```env
 DB_CONNECTION=mysql
-DB_HOST=mysql   # Use DNS name or IP, name of container for compose, name of K8s Service in K8s
+DB_HOST=mysql           # Use DNS name or IP, name of container for compose, name of K8s Service in K8s
 DB_PORT=3306
-DB_DATABASE=website
+DB_DATABASE=laravel-app
 DB_USERNAME=root
 DB_PASSWORD=password
 ```
