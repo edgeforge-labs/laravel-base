@@ -27,7 +27,7 @@ RUN chmod +x /start.sh
 RUN chown -R www-data:www-data /var/www
 
 # update composer and install npm
-RUN composer update && npm install
+RUN composer update && npm install && npm run build
 
 # Generate the Application Key & Migrate DB => moved to start script
 # RUN php artisan key:generate
