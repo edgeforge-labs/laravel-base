@@ -13,7 +13,7 @@ RUN apk update && \
     nginx \
     net-tools \
     nodejs npm \
-    libsodium \
+    libsodium-dev \
     netcat-openbsd && \
     rm -rf /var/cache/apk/*
 
