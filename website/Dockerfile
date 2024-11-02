@@ -46,6 +46,6 @@ RUN chmod +x /start.sh
 RUN chown -R www-data:www-data /var/www
 
 # Update Composer and install npm packages
-RUN composer update && npm install && npm run build
+RUN composer install --no-dev --optimize-autoloader && composer update && npm install && npm run build
 
 CMD ["/start.sh"]
