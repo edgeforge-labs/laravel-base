@@ -17,6 +17,9 @@ RUN apk update && \
     icu-dev \
     curl-dev \
     openssl-dev \
+    freetype-dev \
+    libjpeg-turbo-dev \
+    libwebp-dev \
     netcat-openbsd && \
     rm -rf /var/cache/apk/*
 
