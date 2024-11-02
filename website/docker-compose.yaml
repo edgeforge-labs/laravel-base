@@ -8,6 +8,8 @@ services:
       - mysql
     networks:
       - laravel-network
+    volumes:            # Enable volume to have persistent container storage.
+      - ./:/var/www
 
   mysql:
     image: mysql:8.0
