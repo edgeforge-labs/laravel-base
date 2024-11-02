@@ -13,11 +13,12 @@ RUN apk update && \
     nginx \
     net-tools \
     nodejs npm \
+    libsodium \
     netcat-openbsd && \
     rm -rf /var/cache/apk/*
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd sodium intl ctype curl dom fileinfo filter hash mbstring pdo session tokenizer xml pcre openssl # openssl
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd sodium intl ctype curl dom fileinfo filter hash mbstring pdo session tokenizer xml pcre openssl
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
