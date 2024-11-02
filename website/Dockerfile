@@ -17,7 +17,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd sodium intl Ctype cURL DOM Fileinfo filter hash Mbstring OpenSSL PCRE PDO Session Tokenizer XML
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd sodium intl ctype curl dom fileinfo filter hash mbstring openssl prce pdo session tokenizer xml
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
