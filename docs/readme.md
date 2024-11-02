@@ -2,12 +2,12 @@
 
 This application use laravel 11 to create a modern web application using Next.JS & Tailwind. Jetstream handles authentication and we'll use filament to build the website.
 
-# PHP extensions
+# [PHP extensions](./php-extensions)
 
 
 # Filament
 
-[Official Docs](https://filamentphp.com/docs/3.x/panels/installation)
+[Official Panels Install Docs](https://filamentphp.com/docs/3.x/panels/installation)
 
 ## Installation
 
@@ -30,6 +30,6 @@ Open /admin in your web browser, sign in, and start building your app!
 
 # self hosting runners for arm builds.
 
-# Docker Setup
+# [Docker Setup](./docker)
 
 # Kubernetes Example Setup
