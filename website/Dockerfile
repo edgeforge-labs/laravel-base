@@ -14,6 +14,9 @@ RUN apk update && \
     net-tools \
     nodejs npm \
     libsodium-dev \
+    icu-dev \
+    curl-dev \
+    openssl-dev \
     netcat-openbsd && \
     rm -rf /var/cache/apk/*
 
