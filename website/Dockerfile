@@ -1,3 +1,4 @@
+# [Offical Docs](https://laravel.com/docs/11.x/deployment)
 FROM php:8.3-fpm-alpine
 
 # Install system dependencies
@@ -23,7 +24,7 @@ RUN apk update && \
     netcat-openbsd && \
     rm -rf /var/cache/apk/*
 
-# Install PHP extensions
+# Install PHP extensions | https://laravel.com/docs/11.x/deployment#server-requirements
 RUN docker-php-ext-install pdo_mysql exif pcntl bcmath intl # gd ctype curl dom fileinfo filter hash mbstring pdo session tokenizer xml pcre openssl sodium | no need to enable these extensions they come prepacked by php8.3
 
 # Install Composer
