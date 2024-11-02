@@ -24,7 +24,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql exif pcntl bcmath sodium intl # gd ctype curl dom fileinfo filter hash mbstring pdo session tokenizer xml pcre openssl
+RUN docker-php-ext-install pdo_mysql exif pcntl bcmath intl # gd ctype curl dom fileinfo filter hash mbstring pdo session tokenizer xml pcre openssl sodium | no need to enable these extensions they come prepacked by php8.3
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
