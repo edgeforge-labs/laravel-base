@@ -16,6 +16,8 @@ echo "MySQL is available - continuing with migrations..."
 php artisan key:generate
 php artisan migrate --force  # Use --force in production to run migrations non-interactively
 
+# TODO: need to add section for caching and optimization | https://laravel.com/docs/11.x/deployment#optimization
+
 # Start PHP-FPM in the background
 php-fpm -D
 

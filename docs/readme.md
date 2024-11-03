@@ -7,6 +7,8 @@ This application use laravel 11 to create a modern web application using Next.JS
 
 # Filament
 
+Filament is already packaged in the container. This section is purely for doc purpose. You'll still have to create the user when first running the container.
+
 [Official Panels Install Docs](https://filamentphp.com/docs/3.x/panels/installation)
 
 ## Installation
