@@ -59,7 +59,7 @@ jobs:
             edgeforge/website:latest
             edgeforge/website:${{ steps.gitversion.outputs.semVer }}
             edgeforge/website:${{ github.sha }}
-          platforms: linux/amd64,linux/arm64  # Optional: for multi-architecture support
+        #  platforms: linux/amd64,linux/arm64  # Optional: for multi-architecture support
           # need to add tags here =
           # outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=My multi-arch image
 

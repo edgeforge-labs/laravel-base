@@ -22,4 +22,3 @@ php-fpm -D
 # Start nginx in the foreground
 nginx -g "daemon off;"
 
-# test
