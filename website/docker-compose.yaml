@@ -24,6 +24,19 @@ services:
     networks:
       - laravel-network
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql  # Connects phpMyAdmin to the MySQL service
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "8081:80"  # Maps port 8081 on the host to port 80 in the phpMyAdmin container
+    depends_on:
+      - mysql
+    networks:
+      - laravel-network
+
 networks:
   laravel-network:
     driver: bridge
