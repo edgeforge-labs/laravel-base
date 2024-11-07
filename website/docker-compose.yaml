@@ -8,8 +8,8 @@ services:
       - mysql
     networks:
       - laravel-network
-#    volumes:            # Enable volume to have persistent container storage.
-#      - ./:/var/www
+    volumes:            # Enable volume to have persistent container storage.
+      - ./:/var/www
 
   mysql:
     image: mysql:8.0
@@ -31,7 +31,7 @@ services:
       PMA_HOST: mysql  # Connects phpMyAdmin to the MySQL service
       MYSQL_ROOT_PASSWORD: password
     ports:
-      - "8081:80"  # Maps port 8081 on the host to port 80 in the phpMyAdmin container
+      - "8088:80"  # Maps port 8081 on the host to port 80 in the phpMyAdmin container
     depends_on:
       - mysql
     networks:
