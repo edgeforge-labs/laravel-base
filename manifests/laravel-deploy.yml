@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: laravel
-        image: metimike/laravel-app:latest
+        image: edgeforge/laravel-app:latest
         ports:
         - containerPort: 80

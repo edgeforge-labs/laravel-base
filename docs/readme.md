@@ -2,7 +2,10 @@
 
 This application use laravel 11 to create a modern web application using Next.JS & Tailwind. Jetstream handles authentication and we'll use filament to build the website.
 
-# [PHP extensions](./php-extensions)
+## Prereqs
+
+These extensions come preinstalled in our container:
+- **[PHP extensions dependency list for alpine linux](./php-extensions/readme.md)**
 
 
 # Filament
@@ -29,9 +32,8 @@ php artisan make:filament-user
 
 Open /admin in your web browser, sign in, and start building your app!
 
+# Other documentation resources
 
-# self hosting runners for arm builds.
-
-# [Docker Setup](./docker)
-
-# Kubernetes Example Setup
+- **[Self Hosted Runners (for arm builds)](./selfhosted-runners/readme.md)**
+- **[Docker Setup](./docker)**
+- **[Kubernetes Example Setup](../manifests/readme.md)**

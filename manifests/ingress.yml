@@ -1,20 +1,18 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: laravel-meti-be
+  name: laravel-example-com
   namespace: default
 spec:
-  secretName: laravel-meti-be
+  secretName: laravel-example-com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: laravel.meti.be
+  commonName: laravel.example.com
   dnsNames:
-  - laravel.meti.be
-
+  - laravel.example.com
 
 ---
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -24,7 +22,7 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: laravel.meti.be
+  - host: laravel.example.com
     http:
       paths:
       - pathType: Prefix
@@ -36,5 +34,5 @@ spec:
               number: 80
   tls:
   - hosts:
-     - laravel.meti.be
-    secretName: laravel-meti-be
+     - laravel.example.com
+    secretName: laravel-example-com
