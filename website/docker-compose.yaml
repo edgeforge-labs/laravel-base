@@ -8,8 +8,8 @@ services:
       - mysql
     networks:
       - laravel-network
-    volumes:            # Enable volume to have persistent container storage.
-      - ./:/var/www
+#    volumes:            # Enable volume to have persistent container storage. | this will mount local save into container !!! be careful.
+#      - ./:/var/www
 
   mysql:
     image: mysql:8.0
