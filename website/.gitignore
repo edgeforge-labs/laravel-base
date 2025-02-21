@@ -6,7 +6,7 @@
 /storage/*.key
 /storage/pail
 /vendor
-.env
+#.env # disable in production, just for testing, introduce env vars via different method in prod.
 .env.backup
 .env.production
 .phpactor.json
