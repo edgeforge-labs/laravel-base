@@ -86,4 +86,12 @@ return [
 
     'livewire_loading_delay' => 'default',
 
+    'auth' => [
+        'guard' => 'web', // Jetstream uses the 'web' guard under the hood
+        'pages' => [
+            'login' => \App\Http\Livewire\Auth\Login::class,
+        ],
+    ],
+
+
 ];
