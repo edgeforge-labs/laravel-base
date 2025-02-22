@@ -86,6 +86,7 @@ return [
 
     'livewire_loading_delay' => 'default',
 
+    // remove filament login functionality.
     'auth' => [
         'guard' => 'web', // Jetstream uses the 'web' guard under the hood
         'pages' => [
