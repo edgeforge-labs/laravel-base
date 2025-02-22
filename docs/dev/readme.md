@@ -1,7 +1,7 @@
 # How to develop with this container
 
 Best practice is to use php artisan commands and then commit to the git repository. This will make the changes permanent.
-
+php 
 ## Windows Dev environment
 
 ### Install dependencies
@@ -12,6 +12,19 @@ Best practice is to use php artisan commands and then commit to the git reposito
 
 ### Install using chocolatey
 
-```shell
+```powershell
 choco install php composer docker-desktop
+```
+
+# Install php dependencies with composer
+
+if you want to run artisan commands locally you'll need to install the php dependencies with composer as they are not included in the git repo but generated while creating the container.  
+we'll be running the following command to install the dependencies:
+
+```shell
+composer update --ignore-platform-reqs
+```
+
+```shell
+composer install && npm install && npm run dev
 ```
