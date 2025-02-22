@@ -2,7 +2,6 @@
 
 Best practice is to use php artisan commands and then commit to the git repository. This will make the changes permanent.
 
-
 ## Windows Dev environment
 
 ### Install dependencies
