@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/storage
+# Ignore Filament assets
 /public/css/filament
 /public/js/filament
 /storage/*.key
