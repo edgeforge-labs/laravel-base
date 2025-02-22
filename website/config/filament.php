@@ -90,7 +90,8 @@ return [
     'auth' => [
         'guard' => 'web', // Jetstream uses the 'web' guard under the hood
         'pages' => [
-            'login' => \App\Http\Livewire\Auth\Login::class,
+            // If you don't want Filament’s login page at all, remove or comment out this line:
+//             'login' => \App\Http\Livewire\Auth\Login::class,
         ],
     ],
 
