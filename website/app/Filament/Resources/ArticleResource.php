@@ -13,7 +13,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
-use Awcodes\Curator\Components\Forms\CuratorColumn;
+use Awcodes\Curator\Components\Tables\CuratorColumn;
 
 class ArticleResource extends Resource
 {
