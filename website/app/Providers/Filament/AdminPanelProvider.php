@@ -38,7 +38,7 @@ class AdminPanelProvider extends PanelProvider
                     ->registerNavigation(true)
                     ->defaultListView('grid' || 'list')
                     ->resource(\App\Filament\Resources\CustomMediaResource::class)
-            ]);
+            ])
             // Remove or comment out ->login() so Filament won't register its own login:
             // ->login()
             // Instead, specify the guard you want Filament to use:
