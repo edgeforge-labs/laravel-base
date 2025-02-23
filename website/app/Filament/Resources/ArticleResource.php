@@ -12,7 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Awcodes\FilamentCurator\Forms\Components\MediaPicker;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 
 class ArticleResource extends Resource
 {
@@ -27,7 +27,7 @@ class ArticleResource extends Resource
                 Forms\Components\TextInput::make('title'),
                 Forms\Components\TextInput::make('slug'),
                 Forms\Components\RichEditor::make('content'),
-                MediaPicker::make('media_id'),
+                CuratorPicker::make('media_id'),
             ]);
     }
 
