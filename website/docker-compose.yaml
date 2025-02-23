@@ -1,6 +1,7 @@
 services:
   laravel-app:
     image: edgeforge/website:latest
+    pull_policy: always
     container_name: website
     ports:
       - "8080:80"  # Maps port 8080 on host to port 80 in the container for nginx
