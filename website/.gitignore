@@ -6,6 +6,9 @@
 # Ignore Filament assets
 /public/css/filament
 /public/js/filament
+# Ignore Filament Curator assets
+/public/css/awcodes
+/public/js/awcodes
 /storage/*.key
 /storage/pail
 /vendor
