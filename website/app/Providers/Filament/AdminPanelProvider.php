@@ -37,7 +37,7 @@ class AdminPanelProvider extends PanelProvider
                     ->navigationCountBadge()
                     ->registerNavigation(true)
                     ->defaultListView('grid' || 'list')
-                    ->resource(\App\Filament\Resources\CustomMediaResource::class)
+//                     ->resource(\App\Filament\Resources\CustomMediaResource::class)
             ])
             // Remove or comment out ->login() so Filament won't register its own login:
             // ->login()
