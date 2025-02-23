@@ -27,9 +27,20 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->viteTheme('resources/css/filament/admin/theme.css')
+            ->plugins([
+                \Awcodes\Curator\CuratorPlugin::make()
+                    ->label('Media')
+                    ->pluralLabel('Media')
+                    ->navigationIcon('heroicon-o-photo')
+                    ->navigationGroup('Content')
+                    ->navigationSort(3)
+                    ->navigationCountBadge()
+                    ->registerNavigation(true)
+                    ->defaultListView('grid' || 'list')
+                    ->resource(\App\Filament\Resources\CustomMediaResource::class)
+            ]);
             // Remove or comment out ->login() so Filament won't register its own login:
             // ->login()
-
             // Instead, specify the guard you want Filament to use:
             ->authGuard('web')
 
@@ -60,17 +71,5 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ]);
-//             ->plugins([
-//                 \Awcodes\Curator\CuratorPlugin::make()
-//                     ->label('Media')
-//                     ->pluralLabel('Media')
-//                     ->navigationIcon('heroicon-o-photo')
-//                     ->navigationGroup('Content')
-//                     ->navigationSort(3)
-//                     ->navigationCountBadge()
-//                     ->registerNavigation(false)
-//                     ->defaultListView('grid' || 'list')
-//                     ->resource(\App\Filament\Resources\CustomMediaResource::class)
-//             ]);
     }
 }
