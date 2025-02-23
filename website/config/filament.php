@@ -86,19 +86,17 @@ return [
 
     'livewire_loading_delay' => 'default',
 
-    // remove filament login functionality.
-    'auth' => [
-        'guard' => 'web', // Jetstream uses the 'web' guard under the hood
-        'pages' => [
-            // If you don't want Filament’s login page at all, remove or comment out this line:
-//             'login' => \App\Http\Livewire\Auth\Login::class,
-        'login_redirect' => '/login',
-        'login' => null,
-        'register' => null,
-        'request_password_reset' => null,
-        'reset_password' => null,
-        ],
-    ],
+//     // remove filament login functionality.
+//     'auth' => [
+//         'guard' => 'web', // Jetstream uses the 'web' guard under the hood
+//         'pages' => [
+//         'login_redirect' => '/login',
+//         'login' => null,
+//         'register' => null,
+//         'request_password_reset' => null,
+//         'reset_password' => null,
+//         ],
+//     ],
 
 
 ];

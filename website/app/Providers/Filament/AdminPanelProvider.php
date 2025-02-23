@@ -26,7 +26,12 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->login()
+            // Remove or comment out ->login() so Filament won't register its own login:
+            // ->login()
+
+            // Instead, specify the guard you want Filament to use:
+            ->authGuard('web')
+
             ->colors([
                 'primary' => Color::Amber,
             ])
