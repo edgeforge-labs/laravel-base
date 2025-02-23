@@ -36,7 +36,7 @@ class ArticleResource extends Resource
     {
         return $table
             ->columns([
-                CuratorColumn::make('media_id'),
+                CuratorColumn::make('media_id')
                     ->size(40),
                 Tables\Columns\TextColumn::make('title')->searchable(),
                 Tables\Columns\TextColumn::make('slug')->searchable(),
