@@ -56,6 +56,7 @@ jobs:
             edgeforge/${{ github.event.repository.name }}:latest
             edgeforge/${{ github.event.repository.name }}:${{ steps.gitversion.outputs.semVer }}
             edgeforge/${{ github.event.repository.name }}:${{ github.sha }}
+        # if your username on github and docker hub is the same you can use $GITHUB_REPOSITORY instead of ${{ github.event.repository.name }}
         #  platforms: linux/amd64,linux/arm64  # Optional: for multi-architecture support
           # need to add tags here =
           # outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=My multi-arch image

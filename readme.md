@@ -64,22 +64,3 @@ Docker compose is the default way to use this container. The [compose file](./we
 ## Deploy via kubernetes
 
 in the [manifestdir](manifests/) is an example of deploying this container via kubernetes. -->
-
-Default Laravel Container with Filament
-
-🚀 Laravel + Filament Container – Version 1.111
-
-We're excited to introduce the official first release of our Laravel + Filament container! 🎉
-
-This container serves as a clean, ready-to-use starting point for any new Laravel project, featuring a fresh install of Laravel and Filament, preconfigured for seamless development.
-
-✨ What’s Inside?
-- A minimal yet powerful Laravel + Filament setup
-- Optimized for containerized development
-- Easy to extend and customize for your next project
-
-Start building with confidence—we’ve got the foundation covered!
-
-🚀 Happy coding!
-
-Team EdgeForge Labs
