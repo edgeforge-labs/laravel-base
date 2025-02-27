@@ -1,5 +1,7 @@
 # Setup laravel project container
 
+**TODO: Change naming to laravel base and release as base config for new projects**
+
 ## install composer
 
 https://getcomposer.org/download/
