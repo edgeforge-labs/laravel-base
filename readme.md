@@ -1,4 +1,4 @@
-# Laravel Base Container
+# Laravel 11 - Base Container
 
 **TODO: Change naming to laravel base and release as base config for new projects**
 
@@ -6,6 +6,8 @@ This project aims to provide a base container for laravel development. We have c
 
 # Architecture
 
+- Initial laravel 11 setup
+- container creation / pipeline automation
 
 ## Deploy created image via docker compose
 
@@ -13,4 +15,4 @@ Docker compose is the default way to use this container. The [compose file](./we
 
 ## Deploy created image via kubernetes
 
-under manifests/ there is a ful deploy.yml, this has all the manifests needed to make the app, PV still needs to be added but all the rest is there.
+in the [manifestdir](manifests/) is an example of deploying this container via kubernetes.
