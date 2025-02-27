@@ -53,7 +53,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./website
+          context: ./laravel-base
           push: true
           tags: |
             edgeforge/laravel-base:latest
