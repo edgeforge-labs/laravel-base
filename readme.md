@@ -6,6 +6,8 @@ This project aims to provide a base container for laravel development. We have c
 
 # Manual Setup
 
+**TODO: Change naming to laravel base and release as base config for new projects**
+
 ## install composer
 
 https://getcomposer.org/download/
