@@ -1,6 +1,6 @@
 services:
   laravel-app:
-    image: edgeforge/website:latest
+    image: edgeforge/laravel-base:latest
     pull_policy: always
     container_name: website
     ports:
@@ -17,7 +17,7 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: website
+      MYSQL_DATABASE: laravel
     ports:
       - "3306:3306"  # Exposes MySQL on port 3306
     volumes:
