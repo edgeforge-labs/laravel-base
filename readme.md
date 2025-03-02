@@ -4,7 +4,7 @@
     <strong>Powered by</strong>
 </p>
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/edgeforge-labs/edgeforge-labs/main/edgeforge_logo.png" width="225" alt="Edge Forge Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/edgeforge-labs/edgeforge-labs/main/edgeforge_logo.png" width="275" alt="Edge Forge Logo"></a></p>
 
 <p align="center">
     <a href="https://github.com/edgeforge-labs" target="_blank">
@@ -13,7 +13,11 @@
     <a href="https://laravel.com" target="_blank">
         <img src="https://img.shields.io/badge/Running%20on-Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
     </a>
+    <!-- <a href="https://kubernetes.io/" target="_blank">
+        <img src="https://img.shields.io/badge/Running%20on-Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white">
+    </a> -->
 </p>
+
 
 
 # Laravel 11 - Base Container
