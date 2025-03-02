@@ -4,7 +4,7 @@
     <strong>Powered by</strong>
 </p>
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/edgeforge-labs/edgeforge-labs/main/edgeforge_logo.png" width="275" alt="Edge Forge Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/edgeforge-labs/edgeforge-labs/main/edgeforge_logo_642x642.png" width="175" alt="Edge Forge Logo"></a></p>
 
 <p align="center">
     <a href="https://github.com/edgeforge-labs" target="_blank">
