@@ -1,8 +1,20 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center"> Powered by </p>
+<p align="center">
+    <strong>Powered by</strong>
+</p>
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/edgeforge-labs/edgeforge-labs/main/edgeforge_logo.png" width="300" alt="Edge Forge Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/edgeforge-labs/edgeforge-labs/main/edgeforge_logo.png" width="225" alt="Edge Forge Logo"></a></p>
+
+<p align="center">
+    <a href="https://github.com/edgeforge-labs" target="_blank">
+        <img src="https://img.shields.io/badge/Powered%20by-Edgeforge%20Labs-blue?style=for-the-badge&logo=docker&logoColor=white">
+    </a>
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://img.shields.io/badge/Running%20on-Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
+    </a>
+</p>
+
 
 # Laravel 11 - Base Container
 
